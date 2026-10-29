@@ -3,35 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Thee Landlord (Pty) Ltd | Construction &amp; Property Solutions</title>
-<meta name="description" content="CIDB-registered construction, maintenance and property services across North West and Gauteng. B-BBEE Level 1. Compliance, delivery excellence.">
+<title>Thee Landlord (Pty) Ltd | Property, Construction &amp; Digital Solutions</title>
+<meta name="description" content="CIDB-registered construction, property services and custom software across North West and Gauteng. B-BBEE Level 1. Compliance, delivery excellence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f7f4ee;--surface:#fff;--ink:#15120c;--muted:#5d5748;--line:#e3dccb;
-  --gold:#a97a2c;--soft:#efe9dc;--dk:#0a0908;--g2:#d9a94f;
-  --shadow:0 18px 44px rgba(21,18,12,.12);
-  color-scheme:light;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0a0908;--surface:#14120e;--ink:#f4efe4;--muted:#a9a290;--line:#2a261c;
-    --gold:#d9a94f;--soft:#100e0b;--dk:#050403;
-    --shadow:0 18px 44px rgba(0,0,0,.6);
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0a0908;--surface:#14120e;--ink:#f4efe4;--muted:#a9a290;--line:#2a261c;
-  --gold:#d9a94f;--soft:#100e0b;--dk:#050403;
-  --shadow:0 18px 44px rgba(0,0,0,.6);
-  color-scheme:dark;
-}
+:root{--bg:#f7f4ee;--surface:#fff;--ink:#15120c;--muted:#5d5748;--line:#e3dccb;--gold:#a97a2c;--soft:#efe9dc;--dk:#0a0908;--g2:#d9a94f;--shadow:0 18px 44px rgba(21,18,12,.12);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0908;--surface:#14120e;--ink:#f4efe4;--muted:#a9a290;--line:#2a261c;--gold:#d9a94f;--soft:#100e0b;--dk:#050403;--shadow:0 18px 44px rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a0908;--surface:#14120e;--ink:#f4efe4;--muted:#a9a290;--line:#2a261c;--gold:#d9a94f;--soft:#100e0b;--dk:#050403;--shadow:0 18px 44px rgba(0,0,0,.6);color-scheme:dark}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -40,11 +20,14 @@ h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;line-height:1.06;m
 a{color:inherit}
 .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
 #bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:linear-gradient(90deg,#a97a2c,#f0cf8a);transform:scaleX(0);transform-origin:0 50%;z-index:80}
-
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:rgba(8,7,6,.78);backdrop-filter:blur(16px);border-bottom:1px solid #2a261c;color:#f4efe4}
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.05;flex-shrink:0}
-.logo img{width:46px;height:46px;border-radius:10px;object-fit:cover;background:#f4f2ee;display:block}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:rgba(8,7,6,.78);backdrop-filter:blur(16px);border-bottom:1px solid #2a261c;color:#f4efe4;transition:box-shadow .3s,background .3s}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(217,169,79,.7),transparent)}
+header.sc .nav{height:62px}
+header.sc{box-shadow:0 12px 34px rgba(0,0,0,.5);background:rgba(6,5,4,.92)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;transition:height .3s}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.05}
+.logo img{width:70px;height:46px;border-radius:9px;object-fit:cover;background:#f4f2ee;box-shadow:0 0 0 1px rgba(217,169,79,.45),0 6px 18px rgba(0,0,0,.45);transition:transform .3s}
+.logo:hover img{transform:scale(1.06) rotate(-1.5deg)}
 .logo b{font:700 19px Fraunces,Georgia,serif;display:block}
 .logo small{font-size:10px;letter-spacing:.24em;color:#d9a94f;font-weight:600}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
@@ -56,11 +39,16 @@ nav a:hover{color:#fff}
 .btn:hover::after{transform:translateX(120%)}
 .btn.ghost{background:transparent;color:#f4efe4!important;border:1.5px solid #4a4333}
 .menu{display:none;background:none;border:1px solid #4a4333;color:#f4efe4;border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer}
+nav ul a:not(.btn){position:relative;padding:6px 0}
+nav ul a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#d9a94f;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav ul a:not(.btn):hover::after,nav ul a.act::after{transform:scaleX(1)}
+nav a.act{color:#fff}
 
+/* Hero Section */
 .hero{position:relative;min-height:calc(100vh - 74px);min-height:calc(100svh - 74px);background:var(--dk);color:#f4efe4;display:flex;align-items:center;overflow:hidden;padding:70px 0}
 #cv{position:absolute;inset:0;width:100%;height:100%}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 78% 40%,rgba(217,169,79,.2),transparent 65%),radial-gradient(500px 300px at 10% 100%,rgba(217,169,79,.1),transparent 70%);pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;width:100%}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;width:100%}
 .eyebrow{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#d9a94f;border:1px solid #3d3626;background:rgba(217,169,79,.07);padding:8px 16px;border-radius:99px;margin-bottom:26px}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:#d9a94f;box-shadow:0 0 0 0 rgba(217,169,79,.7);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(217,169,79,0)}100%{box-shadow:0 0 0 0 rgba(217,169,79,0)}}
@@ -72,18 +60,20 @@ nav a:hover{color:#fff}
 .hero p.lead{color:#c4bda9;font-size:19px;max-width:540px;margin:26px 0 34px}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
 .stage{perspective:1000px;display:grid;place-items:center}
-.sign{width:min(100%,400px);aspect-ratio:531/563;border-radius:28px;background:#f4f2ee;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.08),0 0 120px rgba(217,169,79,.25);transform-style:preserve-3d;transition:transform .15s ease-out;position:relative;animation:float 7s ease-in-out infinite}
-.sign img{width:100%;height:100%;display:block;object-fit:cover}
-.sign::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);transform:translateX(-100%);animation:sheen 6s 1.5s infinite}
-@keyframes sheen{40%,100%{transform:translateX(100%)}}
+.sign.vid{width:100%;max-width:600px;aspect-ratio:16/9;border-radius:24px;background:#0a0908;box-shadow:0 40px 90px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.08),0 0 120px rgba(217,169,79,.25);overflow:hidden;transition:transform .15s ease-out;position:relative;animation:float 7s ease-in-out infinite}
+.sign video{width:100%;height:100%;object-fit:cover;display:block}
 @keyframes float{50%{margin-top:-12px}}
+.rp{position:absolute;right:14px;bottom:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(10,9,8,.55);backdrop-filter:blur(8px);color:#f4efe4;font-size:19px;cursor:pointer;transition:transform .3s,background .2s}
+.rp:hover{background:#d9a94f;color:#170f03;transform:rotate(-180deg)}
 .scroll{position:absolute;left:50%;bottom:22px;translate:-50% 0;font-size:11px;letter-spacing:.3em;color:#8d8570;text-transform:uppercase}
 
+/* Marquee */
 .mq{background:#d9a94f;color:#170f03;overflow:hidden;border-block:1px solid #b8862f}
 .mq div{display:flex;gap:48px;width:max-content;padding:15px 0;animation:mq 32s linear infinite;font:600 14px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
 .mq:hover div{animation-play-state:paused}
 @keyframes mq{to{transform:translateX(-50%)}}
 
+/* Global Sections */
 section{padding:110px 0}
 .head{max-width:680px;margin-bottom:56px}
 .head h2{font-size:clamp(32px,4.6vw,56px)}
@@ -91,12 +81,68 @@ section{padding:110px 0}
 .kick{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 .kick::before{content:"";width:34px;height:1.5px;background:var(--gold)}
 
+/* Stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:24px;background:var(--surface);overflow:hidden}
 .stat{padding:38px 28px;border-right:1px solid var(--line)}
 .stat:last-child{border:0}
 .stat b{display:block;font:700 clamp(38px,5vw,60px) Fraunces,serif;line-height:1}
 .stat span{color:var(--muted);font-size:15px;display:block;margin-top:10px}
 
+/* Digital Section */
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.dsv{display:grid;gap:14px;margin:30px 0 34px}
+.dsv div{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--surface);transition:border-color .2s,transform .2s}
+.dsv div:hover{border-color:var(--gold);transform:translateX(4px)}
+.dsv i{font-style:normal;font-size:22px;line-height:1.3}
+.dsv b{display:block}.dsv small{color:var(--muted);font-size:15px;line-height:1.5;display:block}
+.win{background:#0d0c0a;border:1px solid #2f2a1e;border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.35),0 0 80px rgba(217,169,79,.12);overflow:hidden;color:#f4efe4}
+.win .tb{display:flex;gap:7px;align-items:center;padding:14px 16px;border-bottom:1px solid #2a261c}
+.win .tb i{width:10px;height:10px;border-radius:50%;background:#3a3426}
+.win .tb span{margin-left:10px;font-size:12px;color:#8d8570}
+.win .bd{padding:22px;display:grid;gap:18px}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kp div{background:#14120e;border:1px solid #2a261c;border-radius:12px;padding:14px;font:700 24px Fraunces,serif}
+.kp small{display:block;font:500 11.5px Inter,sans-serif;color:#9d9580;margin-top:2px}
+.chart{display:flex;align-items:flex-end;gap:9px;height:130px;border-bottom:1px solid #2a261c}
+.chart i{flex:1;background:linear-gradient(#f0cf8a,#b8862f);border-radius:6px 6px 0 0;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.win.in .chart i{height:var(--h)}
+.rows{display:grid;gap:8px;font-size:13px;color:#c4bda9}
+.rows div{display:flex;justify-content:space-between;padding:9px 12px;background:#14120e;border-radius:9px}
+.rows em{font-style:normal;color:#d9a94f}
+.cap{font-size:12px;color:#8d8570;text-align:center;padding:16px 0 0}
+
+/* Portfolio */
+.dark{background:var(--dk);color:#f4efe4}
+.dark .head p,.dark .kick{color:#b4ac98}
+.dark .kick{color:#d9a94f}.dark .kick::before{background:#d9a94f}
+.flt{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.flt button{font:600 14px Inter,sans-serif;padding:10px 20px;border-radius:99px;border:1px solid #3a3426;background:#14120e;color:#e0d8c4;cursor:pointer;transition:all .2s}
+.flt button:hover{border-color:#d9a94f}
+.flt button.on{background:linear-gradient(135deg,#f0cf8a,#b8862f);color:#170f03;border-color:transparent}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pc{display:flex;flex-direction:column;background:#14120e;border:1px solid #2f2a1e;border-radius:22px;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.pc:hover{transform:translateY(-6px);border-color:#d9a94f;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.pc.hide{display:none}
+.pc .th{height:150px;display:grid;place-items:center;font-size:46px;position:relative;background:radial-gradient(circle at 70% 20%,rgba(217,169,79,.3),transparent 55%),linear-gradient(135deg,#1c170d,#0b0a08);border-bottom:1px solid #2f2a1e}
+.pc .th::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(217,169,79,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(217,169,79,.07) 1px,transparent 1px);background-size:28px 28px}
+.pc .th{text-shadow:0 6px 24px rgba(0,0,0,.6)}
+.pc .bd2{padding:24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pc .cat{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#d9a94f;font-weight:600}
+.pc h3{font-size:23px}
+.pc p{margin:0;color:#b4ac98;font-size:15.5px}
+.pc .meta{margin-top:auto;padding-top:14px}
+.chip{display:inline-block;margin-top:16px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:99px;padding:4px 12px}
+.pc .chip{color:#d9a94f;border-color:#3a3426}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:19px;height:2px;background:var(--line)}
+.step{position:relative;padding:0 22px 0 0}
+.step i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);color:var(--gold);font:700 15px Fraunces,serif;font-style:normal;position:relative;margin-bottom:22px}
+.step h3{font-size:22px;margin-bottom:8px}
+.step p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* Bento Grid */
 .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
 .tile{position:relative;grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;overflow:hidden;transition:transform .3s,border-color .3s}
 .tile.big{grid-column:span 3}
@@ -109,10 +155,7 @@ section{padding:110px 0}
 .tile p{margin:0;color:var(--muted);font-size:16px}
 .tile em{position:absolute;right:24px;top:20px;font:600 13px Fraunces,serif;color:var(--gold);font-style:normal;opacity:.7}
 
-.dark{background:var(--dk);color:#f4efe4}
-.dark .head p,.dark .kick{color:#b4ac98}
-.dark .kick{color:#d9a94f}
-.dark .kick::before{background:#d9a94f}
+/* Projects */
 .proj{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .pj{position:relative;border:1px solid #2f2a1e;border-radius:26px;padding:38px;background:linear-gradient(160deg,#17140d,#0b0a08);overflow:hidden;transition:transform .3s,border-color .3s}
 .pj:hover{transform:translateY(-6px);border-color:#d9a94f}
@@ -124,13 +167,7 @@ section{padding:110px 0}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{font-size:12.5px;border:1px solid #3d3626;border-radius:99px;padding:5px 13px;color:#e0d8c4}
 
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.steps::before{content:"";position:absolute;left:0;right:0;top:19px;height:2px;background:var(--line)}
-.step{position:relative;padding:0 22px 0 0}
-.step i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);color:var(--gold);font:700 15px Fraunces,serif;font-style:normal;position:relative;margin-bottom:22px}
-.step h3{font-size:22px;margin-bottom:8px}
-.step p{margin:0;color:var(--muted);font-size:15.5px}
-
+/* Compliance & About */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .checks{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:20px}
 .checks li{display:flex;gap:16px}
@@ -143,13 +180,11 @@ section{padding:110px 0}
 .tbl span{color:var(--muted)}
 .tbl b{text-align:right}
 .ok{color:#3aa876}
-
 .dir{display:grid;grid-template-columns:auto 1fr;gap:34px;background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:42px;align-items:center}
 .av{width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,#f0cf8a,#b8862f);color:#170f03;display:grid;place-items:center;font:700 34px Fraunces,serif;box-shadow:0 0 0 6px var(--soft)}
 .dir h3{font-size:32px}
 .dir small{color:var(--gold);font-weight:600;letter-spacing:.14em}
 .dir p{color:var(--muted);margin:14px 0 0}
-
 .faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 24px;margin-bottom:12px;transition:border-color .2s}
 .faq details[open]{border-color:var(--gold)}
 .faq summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
@@ -157,6 +192,7 @@ section{padding:110px 0}
 .faq details[open] summary::after{content:"−"}
 .faq p{color:var(--muted);margin:12px 0 0;font-size:16px}
 
+/* Contact */
 .contact{position:relative;background:var(--dk);color:#f4efe4;border-radius:32px;padding:60px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;overflow:hidden;border:1px solid #2f2a1e}
 .contact::before{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(217,169,79,.28),transparent 65%)}
 .contact>*{position:relative}
@@ -175,35 +211,30 @@ form .btn{justify-content:center;font-size:16px;padding:16px}
 footer{background:var(--dk);color:#9d9580;padding:40px 0;font-size:14.5px;border-top:1px solid #2a261c}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+/* Animations */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.hero h1 .w span{transform:none}}
 
-@media (prefers-reduced-motion:reduce){
-  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-  .reveal{opacity:1;transform:none}
-  .hero h1 .w span{transform:none}
-}
+/* Media Queries */
 @media (max-width:920px){
-  .hero .wrap,.split,.contact,.proj{grid-template-columns:1fr}
-  .stage{order:-1}
-  .sign{width:min(70%,280px)}
+  .hero .wrap,.split,.contact,.proj,.dg{grid-template-columns:1fr}
+  .pg{grid-template-columns:1fr 1fr}
+  .stage{order:-1}.sign.vid{max-width:none}
   .hero{padding:44px 0 80px;min-height:0}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:0}
-  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .bento{grid-template-columns:1fr 1fr}
-  .tile,.tile.big{grid-column:span 1}
-  .steps{grid-template-columns:1fr 1fr;gap:34px 0}
-  .steps::before{display:none}
+  .stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .bento{grid-template-columns:1fr 1fr}.tile,.tile.big{grid-column:span 1}
+  .steps{grid-template-columns:1fr 1fr;gap:34px 0}.steps::before{display:none}
   .contact{padding:34px 22px}
   .menu{display:block}
-  nav ul{display:none;position:absolute;left:0;right:0;top:74px;flex-direction:column;align-items:stretch;gap:0;background:#0a0908;border-bottom:1px solid #2a261c;padding:8px 22px 18px}
+  nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:#0a0908;border-bottom:1px solid #2a261c;padding:8px 22px 18px}
   nav ul.open{display:flex}
   nav li a{display:block;padding:12px 0}
   .scroll{display:none}
 }
+@media (max-width:420px){.logo small{display:none}}
 @media (max-width:560px){
-  .bento,.row,.steps{grid-template-columns:1fr}
+  .bento,.row,.steps,.pg{grid-template-columns:1fr}
   section{padding:72px 0}
   .dir{grid-template-columns:1fr;padding:28px}
 }
@@ -215,44 +246,49 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Thee Landlord home">
-      <img src="images/logo.jpg" alt="Thee Landlord logo" width="46" height="46"
-           onerror="this.style.display='none'">
+      <img src="images/logo.jpg" alt="Thee Landlord logo">
       <span>
         <b>Thee Landlord</b>
-        <small>CONSTRUCTION &amp; PROPERTY</small>
+        <small>DIGITAL · PROPERTY · CONSTRUCTION</small>
       </span>
     </a>
     <nav aria-label="Main">
       <button class="menu" id="mb" aria-label="Menu" aria-expanded="false">☰</button>
       <ul id="ml">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#digital">Solutions</a></li>
+        <li><a href="#portfolio">Our work</a></li>
         <li><a href="#process">Process</a></li>
+        <li><a href="#build">Property &amp; construction</a></li>
         <li><a href="#compliance">Compliance</a></li>
         <li><a href="#about">About</a></li>
-        <li><a class="btn" href="#contact">Request a quote</a></li>
+        <li><a class="btn" href="#contact">Start a project</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="top">
+  <!-- HERO SECTION -->
   <div class="hero">
     <canvas id="cv" aria-hidden="true"></canvas>
     <div class="wrap">
       <div>
-        <span class="eyebrow"><i></i>Est. 2019 · North West &amp; Gauteng</span>
-        <h1 id="h1">Built with precision. <span class="gold">Delivered with integrity.</span></h1>
-        <p class="lead">Thee Landlord is a CIDB-registered construction and property solutions company. From new builds to ongoing maintenance, we deliver compliant, cost-efficient infrastructure that lasts.</p>
+        <span class="eyebrow"><i></i>Thee Landlord Digital Solutions</span>
+        <h1 id="h1">Digital solutions built for <span class="gold">real businesses.</span></h1>
+        <p class="lead">We design and build websites, web applications and business software, from property management platforms to contractor portals. Backed by a registered, compliant company with real property and construction experience.</p>
         <div class="cta">
-          <a class="btn" href="#contact">Request a quote →</a>
-          <a class="btn ghost" href="#projects">See our work</a>
+          <a class="btn" href="#contact" data-svc="Website or web application">Start a digital project →</a>
+          <a class="btn ghost" href="#portfolio">See our work</a>
         </div>
       </div>
       <div class="stage">
-        <div class="sign" id="sign">
-          <img src="images/signage.jpg" alt="Thee Landlord signage"
-               onerror="this.style.display='none'">
+        <div class="sign vid" id="sign">
+          <!-- VIDEO INTEGRATED HERE -->
+          <video id="hv" muted playsinline loop autoplay preload="auto" poster="images/logo-poster.jpg">
+            <source src="Logo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button class="rp" id="rp" aria-label="Replay animation">↻</button>
         </div>
       </div>
     </div>
@@ -261,18 +297,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <div class="mq" aria-hidden="true">
     <div>
-      <span>CIDB 1GB · 1ME · 1SG</span><span>◆</span>
-      <span>B-BBEE Level 1</span><span>◆</span>
-      <span>100% Black Owned</span><span>◆</span>
-      <span>CSD Registered</span><span>◆</span>
-      <span>SARS Tax Compliant</span><span>◆</span>
-      <span>Public Liability Insured</span><span>◆</span>
-      <span>CIDB 1GB · 1ME · 1SG</span><span>◆</span>
-      <span>B-BBEE Level 1</span><span>◆</span>
-      <span>100% Black Owned</span><span>◆</span>
-      <span>CSD Registered</span><span>◆</span>
-      <span>SARS Tax Compliant</span><span>◆</span>
-      <span>Public Liability Insured</span><span>◆</span>
+      <span>Websites</span><span>◆</span><span>Web Applications</span><span>◆</span><span>Business Software</span><span>◆</span><span>Property Technology</span><span>◆</span><span>Construction Software</span><span>◆</span><span>CIDB 1GB · 1ME · 1SG</span><span>◆</span><span>B-BBEE Level 1</span><span>◆</span><span>CSD Registered</span><span>◆</span>
+      <span>Websites</span><span>◆</span><span>Web Applications</span><span>◆</span><span>Business Software</span><span>◆</span><span>Property Technology</span><span>◆</span><span>Construction Software</span><span>◆</span><span>CIDB 1GB · 1ME · 1SG</span><span>◆</span><span>B-BBEE Level 1</span><span>◆</span><span>CSD Registered</span><span>◆</span>
     </div>
   </div>
 
@@ -280,19 +306,94 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="wrap">
       <div class="stats reveal">
         <div class="stat"><b class="gold"><span data-n="2019">0</span></b><span>Established</span></div>
-        <div class="stat"><b class="gold">R<span data-n="11">0</span>m+</b><span>Public-sector projects delivered</span></div>
+        <div class="stat"><b class="gold"><span data-n="12">0</span>+</b><span>Digital projects in our portfolio</span></div>
         <div class="stat"><b class="gold"><span data-n="100">0</span>%</b><span>Black owned</span></div>
         <div class="stat"><b class="gold"><span data-n="3">0</span></b><span>CIDB classes of work</span></div>
       </div>
     </div>
   </section>
 
-  <section id="services" style="padding-top:20px">
+  <section id="digital" style="background:var(--soft);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="dg">
+        <div class="reveal">
+          <span class="kick">What we build</span>
+          <h2 style="font-size:clamp(32px,4.6vw,56px)">Software that helps you <span class="gold">operate better</span></h2>
+          <p style="color:var(--muted);font-size:18px;margin:16px 0 0">Beyond the building site, we design and develop professional websites, custom web applications and management platforms that help organisations operate more efficiently.</p>
+          <div class="dsv">
+            <div><i>🖥️</i><span><b>Website development</b><small>Business websites, landing pages, portfolios, galleries and online company profiles.</small></span></div>
+            <div><i>⚙️</i><span><b>Web applications</b><small>Tailored dashboards, customer-facing platforms and digital products.</small></span></div>
+            <div><i>🏠</i><span><b>Property technology</b><small>Rental management, tenant records, payments, inspections and maintenance tracking.</small></span></div>
+            <div><i>📐</i><span><b>Construction software</b><small>Contractor portals, project tracking, quotation workflows and site administration.</small></span></div>
+          </div>
+          <a class="btn" href="#contact" data-svc="Website or web application">Start a digital project →</a>
+        </div>
+        <div class="reveal win" aria-hidden="true">
+          <div class="tb"><i></i><i></i><i></i><span>property-dashboard</span></div>
+          <div class="bd">
+            <div class="kp"><div>24<small>Units</small></div><div>92%<small>Occupied</small></div><div>5<small>Open jobs</small></div></div>
+            <div class="chart"><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:50%"></i><i style="--h:78%"></i><i style="--h:68%"></i><i style="--h:90%"></i><i style="--h:84%"></i></div>
+            <div class="rows"><div>Unit 7 · Lease renewal<em>Due in 14 days</em></div><div>Unit 12 · Plumbing repair<em>In progress</em></div><div>Unit 3 · Inspection<em>Scheduled</em></div></div>
+          </div>
+          <div class="cap">Illustrative interface with sample data</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="dark">
     <div class="wrap">
       <div class="head reveal">
-        <span class="kick">What we do</span>
-        <h2>One accountable team, <span class="gold">every trade</span></h2>
-        <p>We coordinate the trades, enforce quality and keep projects safe and on schedule, from the first brick to the final handover.</p>
+        <span class="kick">Our work</span>
+        <h2>Products we’ve <span class="gold">designed and built</span></h2>
+        <p>A selection of websites, platforms and applications from Thee Landlord Digital Solutions. Live demos are available on request.</p>
+      </div>
+      <div class="flt reveal">
+        <button class="on" data-f="all">All</button>
+        <button data-f="property">Property tech</button>
+        <button data-f="construction">Construction tech</button>
+        <button data-f="web">Websites</button>
+        <button data-f="apps">Web apps</button>
+      </div>
+      <div class="pg">
+        <article class="pc reveal" data-cat="property"><div class="th">🏘️</div><div class="bd2"><span class="cat">Property tech</span><h3>Rentala</h3><p>Property management platform for rentals, tenants, payments, inspections and maintenance.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="property"><div class="th">🧾</div><div class="bd2"><span class="cat">Property tech</span><h3>TheeQuotah</h3><p>Business and property software platform built for the Thee Landlord ecosystem.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="construction"><div class="th">🧰</div><div class="bd2"><span class="cat">Construction tech</span><h3>Sengila Contractor Portal</h3><p>Contractor portal with a dedicated backend for project tracking and site administration.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="construction"><div class="th">🔗</div><div class="bd2"><span class="cat">Construction tech</span><h3>Itesho</h3><p>Integrated business application with a connected frontend and backend.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="web"><div class="th">🎨</div><div class="bd2"><span class="cat">Website</span><h3>Xoliswa Nkala Website</h3><p>Professional personal and artist website with a clean, modern presentation.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="web"><div class="th">🖼️</div><div class="bd2"><span class="cat">Website</span><h3>Zanele World Gallery</h3><p>Online gallery website designed to showcase creative work beautifully.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="web"><div class="th">🧴</div><div class="bd2"><span class="cat">Website</span><h3>Aseptiq Products</h3><p>Product showcase website for a growing business.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="web"><div class="th">🏗️</div><div class="bd2"><span class="cat">Website</span><h3>Thee Landlord</h3><p>Our own company website, the one you are looking at.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="apps"><div class="th">🚗</div><div class="bd2"><span class="cat">Web app</span><h3>Waypool</h3><p>Custom web application and digital product.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="apps"><div class="th">🧩</div><div class="bd2"><span class="cat">Web app</span><h3>Rhuone</h3><p>Custom web application and digital product.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="apps"><div class="th">📱</div><div class="bd2"><span class="cat">Web app</span><h3>PuZaRApp</h3><p>Custom web application and digital product.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+        <article class="pc reveal" data-cat="apps"><div class="th">🩺</div><div class="bd2"><span class="cat">Web app</span><h3>Breathe Again MedQuest</h3><p>Custom web application and digital product.</p><div class="meta"><span class="chip" style="margin:0">Demo on request</span></div></div></article>
+      </div>
+      <p class="reveal" style="margin:40px 0 0"><a class="btn ghost" href="https://github.com/BongaNkala" target="_blank" rel="noopener">Browse our code on GitHub ↗</a></p>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="kick">How we work</span>
+        <h2>From idea to launch, <span class="gold">without the guesswork</span></h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><i>1</i><h3>Discover</h3><p>We learn your business, goals and users, then agree scope, timeline and cost.</p></div>
+        <div class="step reveal"><i>2</i><h3>Design</h3><p>Clear structure and a polished interface you approve before we build.</p></div>
+        <div class="step reveal"><i>3</i><h3>Build</h3><p>Fast, secure, mobile-ready development with regular progress demos.</p></div>
+        <div class="step reveal"><i>4</i><h3>Launch &amp; support</h3><p>Deployment, training and ongoing maintenance so it keeps working for you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="build">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="kick">Beyond software</span>
+        <h2>Rooted in <span class="gold">property &amp; construction</span></h2>
+        <p>Our digital work is shaped by real industry experience. As a CIDB-registered contractor we also build, renovate and maintain properties.</p>
       </div>
       <div class="bento">
         <div class="tile big reveal"><em>01</em><div class="ico">🏗️</div><h3>Construction</h3><p>Residential housing, commercial buildings and institutional infrastructure, built to specification with disciplined project execution.</p></div>
@@ -315,34 +416,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
       <div class="proj">
         <div class="pj reveal">
-          <div class="v gold">R5.07m</div>
-          <h3>Cocekani Technical High School</h3>
-          <div class="m">Jouberton, Klerksdorp · 2023 · 8 months</div>
+          <div class="v gold">R5.07m</div><h3>Cocekani Technical High School</h3><div class="m">Jouberton, Klerksdorp · 2023 · 8 months</div>
           <p>Major renovation and structural repairs, with upgraded electrical, plumbing and sanitation, and refurbished classrooms, admin areas and recreational spaces.</p>
           <div class="tags"><span>Waterproofing</span><span>Roofing</span><span>Electrical</span><span>Plumbing</span><span>Tiling</span><span>Ceilings</span></div>
         </div>
         <div class="pj reveal">
-          <div class="v gold">R6m</div>
-          <h3>Thuto Tsebo Secondary School</h3>
-          <div class="m">Kanana, Klerksdorp · 2024 · 7 months</div>
+          <div class="v gold">R6m</div><h3>Thuto Tsebo Secondary School</h3><div class="m">Kanana, Klerksdorp · 2024 · 7 months</div>
           <p>Comprehensive renovation including new ceilings, doors and windows, refurbished ablutions and external landscaping, to full safety standards.</p>
           <div class="tags"><span>Glazing</span><span>Carpentry</span><span>Ablutions</span><span>Paintwork</span><span>External works</span></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="process">
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="kick">How we work</span>
-        <h2>A disciplined process, <span class="gold">start to finish</span></h2>
-      </div>
-      <div class="steps">
-        <div class="step reveal"><i>1</i><h3>Assess</h3><p>Site visit, scope, risk assessment and a clear costed proposal.</p></div>
-        <div class="step reveal"><i>2</i><h3>Plan</h3><p>Programme, safety plan and procurement agreed before work begins.</p></div>
-        <div class="step reveal"><i>3</i><h3>Build</h3><p>Qualified supervisors, daily toolbox talks and workmanship inspections.</p></div>
-        <div class="step reveal"><i>4</i><h3>Handover</h3><p>Final compliance checks, sign-off and ongoing maintenance support.</p></div>
       </div>
     </div>
   </section>
@@ -378,8 +460,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="dir reveal">
         <div class="av">SN</div>
         <div>
-          <h3>Siyabonga Nkala</h3>
-          <small>DIRECTOR &amp; CEO</small>
+          <h3>Siyabonga Nkala</h3><small>DIRECTOR &amp; CEO</small>
           <p>More than ten years in project coordination, construction management and property development. He has helped manage major infrastructure work, including the N12 Matlosana Estates residential development, and holds a Construction Manager Certificate (UCT) plus project management and health and safety qualifications.</p>
         </div>
       </div>
@@ -407,25 +488,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <h2>Let’s build something <span class="gold">that lasts</span></h2>
           <p>Tell us what you need built, repaired or maintained and we’ll respond with a clear quote.</p>
           <p><b>Email</b><br><a href="mailto:info@theelandlord.co.za">info@theelandlord.co.za</a></p>
-          <p><b>Phone</b><br><a href="tel:+27872657199">087 265 7199</a></p>
+          <p><b>Phone</b><br><a href="tel:+27604221452">060 422 1452</a> · <a href="tel:+27872657199">087 265 7199</a></p>
           <p><b>Offices</b><br>22 School North Street, Home Lake, Randfontein<br>3 Latham Street, Irene Park, Klerksdorp</p>
         </div>
         <form id="f" novalidate>
-          <div class="row">
-            <label>Full name<input name="n" required autocomplete="name"></label>
-            <label>Phone<input name="p" type="tel" required autocomplete="tel"></label>
-          </div>
+          <div class="row"><label>Full name<input name="n" required autocomplete="name"></label><label>Phone<input name="p" type="tel" required autocomplete="tel"></label></div>
           <label>Email<input name="e" type="email" required autocomplete="email"></label>
-          <label>Service
-            <select name="s">
-              <option>Construction</option>
-              <option>Renovations &amp; refurbishment</option>
-              <option>Property maintenance</option>
-              <option>Electrical</option>
-              <option>Cleaning &amp; landscaping</option>
-              <option>Other</option>
-            </select>
-          </label>
+          <label>Service<select name="s"><option>Website or web application</option><option>Business or property software</option><option>Construction</option><option>Renovations &amp; refurbishment</option><option>Property maintenance</option><option>Electrical</option><option>Cleaning &amp; landscaping</option><option>Other</option></select></label>
           <label>Project details<textarea name="m" rows="3"></textarea></label>
           <button class="btn" type="submit">Send my request →</button>
           <div class="msg" id="msg" role="status"></div>
@@ -438,7 +507,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© <span id="y">2026</span> Thee Landlord (Pty) Ltd · Reg. 2019/287364/07</span>
-    <span>Professional Infrastructure • Compliance • Delivery Excellence</span>
+    <span>Building Properties. Building Businesses. Building Digital Solutions.</span>
   </div>
 </footer>
 
@@ -446,32 +515,38 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 (function(){
   var rm = matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-  document.getElementById('y').textContent = new Date().getFullYear();
-
+  // Menu
   var b = document.getElementById('mb'), l = document.getElementById('ml');
-  b.addEventListener('click', function(){
+  b.onclick = function() {
     var o = l.classList.toggle('open');
     b.setAttribute('aria-expanded', o);
-  });
-  l.addEventListener('click', function(e){
+  };
+  l.addEventListener('click', function(e) {
     if (e.target.tagName === 'A') {
       l.classList.remove('open');
       b.setAttribute('aria-expanded', false);
     }
   });
 
+  // Headline word reveal
   var h = document.getElementById('h1'), i = 0;
-  (function split(n){
-    Array.prototype.slice.call(n.childNodes).forEach(function(c){
+  (function split(n) {
+    Array.prototype.slice.call(n.childNodes).forEach(function(c) {
       if (c.nodeType === 3) {
         var f = document.createDocumentFragment();
-        c.textContent.split(/(\s+)/).forEach(function(t){
+        c.textContent.split(/(\s+)/).forEach(function(t) {
           if (!t) return;
-          if (/^\s+$/.test(t)) { f.appendChild(document.createTextNode(' ')); return; }
-          var w = document.createElement('span'); w.className = 'w';
-          var s = document.createElement('span'); s.textContent = t;
+          if (/^\s+$/.test(t)) {
+            f.appendChild(document.createTextNode(' '));
+            return;
+          }
+          var w = document.createElement('span');
+          w.className = 'w';
+          var s = document.createElement('span');
+          s.textContent = t;
           s.style.animationDelay = (.15 + i++ * .09) + 's';
-          w.appendChild(s); f.appendChild(w);
+          w.appendChild(s);
+          f.appendChild(w);
         });
         c.replaceWith(f);
       } else if (c.nodeType === 1) {
@@ -479,33 +554,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       }
     });
   })(h);
+  
   var g = h.querySelector('.gold');
-  if (g) {
-    g.querySelectorAll('.w span').forEach(function(s){ s.classList.add('gold'); });
-    g.classList.remove('gold');
-  }
+  g.querySelectorAll('.w span').forEach(function(s) { s.classList.add('gold'); });
+  g.classList.remove('gold');
 
-  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
-    es.forEach(function(x){
+  // Reveal + counters
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es) {
+    es.forEach(function(x) {
       if (x.isIntersecting) {
         x.target.classList.add('in');
         io.unobserve(x.target);
         x.target.querySelectorAll('[data-n]').forEach(count);
       }
     });
-  }, {threshold:.12}) : null;
+  }, { threshold: .12 }) : null;
 
-  document.querySelectorAll('.reveal').forEach(function(el, k){
+  document.querySelectorAll('.reveal').forEach(function(el, k) {
     el.style.transitionDelay = (k % 3) * .08 + 's';
-    if (io) io.observe(el);
-    else { el.classList.add('in'); el.querySelectorAll('[data-n]').forEach(count); }
+    io ? io.observe(el) : (el.classList.add('in'), el.querySelectorAll('[data-n]').forEach(count));
   });
 
-  function count(el){
+  function count(el) {
     var t = +el.dataset.n;
-    if (rm) { el.textContent = t; return; }
+    if (rm) {
+      el.textContent = t;
+      return;
+    }
     var s = null;
-    (function st(ts){
+    (function st(ts) {
       s = s || ts;
       var p = Math.min((ts - s) / 1600, 1);
       el.textContent = Math.round(t * (1 - Math.pow(1 - p, 3)));
@@ -513,53 +590,53 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     })(performance.now());
   }
 
+  // Scroll progress
   var bar = document.getElementById('bar');
-  addEventListener('scroll', function(){
+  addEventListener('scroll', function() {
     var d = document.documentElement;
     bar.style.transform = 'scaleX(' + (scrollY / (d.scrollHeight - innerHeight || 1)) + ')';
-  }, {passive:true});
+  }, { passive: true });
 
-  document.querySelectorAll('.tile').forEach(function(t){
-    t.addEventListener('pointermove', function(e){
+  // Tile spotlight
+  document.querySelectorAll('.tile').forEach(function(t) {
+    t.addEventListener('pointermove', function(e) {
       var r = t.getBoundingClientRect();
       t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
       t.style.setProperty('--my', (e.clientY - r.top) + 'px');
     });
   });
 
+  // Logo tilt
   var sg = document.getElementById('sign');
   if (!rm && matchMedia('(hover:hover)').matches) {
-    var hero = document.querySelector('.hero');
-    hero.addEventListener('pointermove', function(e){
-      var r = sg.getBoundingClientRect();
-      var x = (e.clientX - r.left - r.width / 2) / innerWidth;
-      var y = (e.clientY - r.top - r.height / 2) / innerHeight;
+    document.querySelector('.hero').addEventListener('pointermove', function(e) {
+      var r = sg.getBoundingClientRect(), x = (e.clientX - r.left - r.width / 2) / innerWidth, y = (e.clientY - r.top - r.height / 2) / innerHeight;
       sg.style.transform = 'rotateY(' + (x * 28) + 'deg) rotateX(' + (-y * 28) + 'deg)';
     });
-    hero.addEventListener('pointerleave', function(){ sg.style.transform = ''; });
+    document.querySelector('.hero').addEventListener('pointerleave', function() {
+      sg.style.transform = '';
+    });
   }
 
-  var cv = document.getElementById('cv');
-  var cx = cv.getContext && cv.getContext('2d');
+  // Blueprint canvas
+  var cv = document.getElementById('cv'), cx = cv.getContext && cv.getContext('2d');
   if (cx) {
-    var W, H, P = [], m = {x:-999, y:-999}, run = true, dpr = Math.min(devicePixelRatio || 1, 2);
-    function rs(){
+    var W, H, P = [], m = { x: -999, y: -999 }, run = true, dpr = Math.min(devicePixelRatio || 1, 2);
+    function rs() {
       var r = cv.getBoundingClientRect();
-      W = r.width; H = r.height;
-      cv.width = W * dpr; cv.height = H * dpr;
+      W = r.width;
+      H = r.height;
+      cv.width = W * dpr;
+      cv.height = H * dpr;
       cx.setTransform(dpr, 0, 0, dpr, 0, 0);
       P = [];
       var n = Math.min(70, Math.floor(W * H / 14000));
-      for (var k = 0; k < n; k++) {
-        P.push({
-          x: Math.random() * W, y: Math.random() * H,
-          vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3
-        });
-      }
+      for (var k = 0; k < n; k++) P.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3 });
     }
-    function draw(){
+    function draw() {
       cx.clearRect(0, 0, W, H);
-      cx.strokeStyle = 'rgba(217,169,79,.05)'; cx.lineWidth = 1;
+      cx.strokeStyle = 'rgba(217,169,79,.05)';
+      cx.lineWidth = 1;
       for (var x = 0; x < W; x += 60) { cx.beginPath(); cx.moveTo(x, 0); cx.lineTo(x, H); cx.stroke(); }
       for (var y = 0; y < H; y += 60) { cx.beginPath(); cx.moveTo(0, y); cx.lineTo(W, y); cx.stroke(); }
       for (var a = 0; a < P.length; a++) {
@@ -588,11 +665,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     }
     rs();
     addEventListener('resize', rs);
-    cv.parentNode.addEventListener('pointermove', function(e){
+    cv.parentNode.addEventListener('pointermove', function(e) {
       var r = cv.getBoundingClientRect();
       m.x = e.clientX - r.left; m.y = e.clientY - r.top;
     });
-    new IntersectionObserver(function(e){
+    new IntersectionObserver(function(e) {
       var v = e[0].isIntersecting;
       if (v && !run) { run = true; draw(); }
       run = v;
@@ -600,15 +677,78 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     draw();
   }
 
-  document.getElementById('f').addEventListener('submit', function(ev){
+  // Form Select logic
+  document.querySelectorAll('[data-svc]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.querySelector('#f select').value = a.dataset.svc;
+    });
+  });
+
+  // Portfolio Filter
+  document.querySelectorAll('.flt button').forEach(function(bt) {
+    bt.addEventListener('click', function() {
+      document.querySelectorAll('.flt button').forEach(function(x) { x.classList.remove('on'); });
+      bt.classList.add('on');
+      document.querySelectorAll('.pc').forEach(function(c) {
+        c.classList.toggle('hide', bt.dataset.f !== 'all' && c.dataset.cat !== bt.dataset.f);
+      });
+    });
+  });
+
+  // Header Scroll
+  var hd = document.querySelector('header');
+  addEventListener('scroll', function() {
+    hd.classList.toggle('sc', scrollY > 40);
+  }, { passive: true });
+
+  // Intersection Nav Links
+  var links = {};
+  document.querySelectorAll('nav ul a[href^="#"]').forEach(function(a) {
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function(es) {
+      es.forEach(function(e) {
+        if (e.isIntersecting) {
+          Object.keys(links).forEach(function(k) { links[k].classList.remove('act'); });
+          var a = links[e.target.id];
+          if (a) a.classList.add('act');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['digital', 'portfolio', 'process', 'build', 'projects', 'compliance', 'about', 'contact'].forEach(function(id) {
+      var s = document.getElementById(id);
+      if (s) so.observe(s);
+    });
+  }
+
+  // Video Handling
+  var hv = document.getElementById('hv');
+  if (hv) {
+    if (rm) {
+      hv.removeAttribute('autoplay');
+      hv.pause();
+    } else {
+      var pl = hv.play();
+      if (pl && pl.catch) pl.catch(function() {});
+    }
+    document.getElementById('rp').onclick = function() {
+      hv.currentTime = 0;
+      var p = hv.play();
+      if (p && p.catch) p.catch(function() {});
+    };
+  }
+
+  // Form Handling
+  document.getElementById('f').addEventListener('submit', function(ev) {
     ev.preventDefault();
-    var f = ev.target, msg = document.getElementById('msg'), d = new FormData(f);
+    var f = ev.target, m = document.getElementById('msg'), d = new FormData(f);
     if (!d.get('n').trim() || !d.get('p').trim() || !/^\S+@\S+\.\S+$/.test(d.get('e'))) {
-      msg.textContent = 'Please add your name, phone number and a valid email.';
+      m.textContent = 'Please add your name, phone number and a valid email.';
       return;
     }
     var body = 'Name: ' + d.get('n') + '\nPhone: ' + d.get('p') + '\nEmail: ' + d.get('e') + '\nService: ' + d.get('s') + '\n\n' + d.get('m');
-    msg.textContent = 'Opening your email app…';
+    m.textContent = 'Opening your email app…';
     location.href = 'mailto:info@theelandlord.co.za?subject=' + encodeURIComponent('Quote request: ' + d.get('s')) + '&body=' + encodeURIComponent(body);
   });
 })();
